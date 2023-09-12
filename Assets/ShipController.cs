@@ -4,12 +4,24 @@ using UnityEngine;
 
 public class ShipController : MonoBehaviour
 {
+
+  [SerializeField]
+  float speed = 5; // rutor per sekund
+
+  [SerializeField]
+  GameObject bulletPrefab;
+
+  [SerializeField]
+  Transform gunPosition;
+
+  float shotTimer = 0;
   
+  [SerializeField]
+  float timeBetweenShots = 0.5f;
 
   // Update is called once per frame
   void Update()
   {
-    float speed = 5; // rutor per sekund
 
     float moveX = Input.GetAxisRaw("Horizontal");
     float moveY = Input.GetAxisRaw("Vertical");
@@ -19,5 +31,13 @@ public class ShipController : MonoBehaviour
 
     transform.Translate(movement);
 
+    // Skjutakod
+    shotTimer += Time.deltaTime;
+
+    if (Input.GetAxisRaw("Fire1") > 0 && shotTimer > timeBetweenShots)
+    {
+      Instantiate(bulletPrefab, gunPosition.position, Quaternion.identity);
+      shotTimer = 0;
+    }
   }
 }

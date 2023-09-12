@@ -12,7 +12,7 @@ public class BoltController : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    float speed = 4;
+    float speed = 8;
 
     Vector2 movement = new Vector2(0, speed) * Time.deltaTime;
 
