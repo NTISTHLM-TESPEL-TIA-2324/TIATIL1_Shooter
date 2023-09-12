@@ -41,3 +41,14 @@ public class ShipController : MonoBehaviour
     }
   }
 }
+/*
+- Fiender
+   x Röra sig
+   - När fiende dör, skapa ny fiende (minimum 1 fiende på skärmen)
+   - Att fienden kan dö (kollision med skott/spelaren)
+   - Spawnas
+- Begränsa så man inte kan åka utanför skärmen
+- Något sätt att avsluta spelet – vinna/förlora
+- 
+
+*/
