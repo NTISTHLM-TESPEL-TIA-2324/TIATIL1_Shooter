@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+
+  [SerializeField]
+  GameObject explosionPrefab;
+
   void Start()
   {
     float x = Random.Range(-5f, 5f);
@@ -25,4 +29,17 @@ public class EnemyController : MonoBehaviour
       GameObject.Destroy(this.gameObject);
     }
   }
+
+  private void OnTriggerEnter2D(Collider2D other)
+  {
+    if (other.gameObject.tag == "bolt")
+    {
+      Destroy(this.gameObject);
+      GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
+      Destroy(explosion, 0.3f);
+
+    }
+  }
+
 }
