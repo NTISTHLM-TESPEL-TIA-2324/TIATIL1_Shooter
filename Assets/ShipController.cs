@@ -19,6 +19,9 @@ public class ShipController : MonoBehaviour
   [SerializeField]
   float timeBetweenShots = 0.5f;
 
+  [SerializeField]
+  AudioClip shootSound;
+
   // Update is called once per frame
   void Update()
   {
@@ -36,6 +39,7 @@ public class ShipController : MonoBehaviour
 
     if (Input.GetAxisRaw("Fire1") > 0 && shotTimer > timeBetweenShots)
     {
+      GetComponent<AudioSource>().Play();
       Instantiate(bulletPrefab, gunPosition.position, Quaternion.identity);
       shotTimer = 0;
     }

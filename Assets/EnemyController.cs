@@ -32,7 +32,7 @@ public class EnemyController : MonoBehaviour
 
   private void OnTriggerEnter2D(Collider2D other)
   {
-    if (other.gameObject.tag == "bolt")
+    if (other.gameObject.tag == "bolt" || other.gameObject.tag == "Player")
     {
       Destroy(this.gameObject);
       GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);

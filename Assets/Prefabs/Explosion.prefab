@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4252106176577570}
   - component: {fileID: 212662395838400496}
   - component: {fileID: 95621848136959202}
-  - component: {fileID: 8072766846758970686}
+  - component: {fileID: 8168673116863688043}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -107,7 +107,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!82 &8072766846758970686
+--- !u!82 &8168673116863688043
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
